@@ -18,8 +18,6 @@ else console.log("niepoprawny")
 /* test */
 EmailValidate("natalia@gmasilcom");
 
-
-
 // Sprawdzenie czy wszystkie pola zostały wypełnione 
 formButton.addEventListener("click", EmailValidate(inputEmail));
 */
