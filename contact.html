@@ -7,6 +7,7 @@
         <meta name="description" content="Mr.Cofee - best coffee in Katowice">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="application.css">
+       
     </head>
     <body>
         <header>
@@ -24,12 +25,12 @@
             </div>
             <div> 
             <form class="form-1">
-                <input class="form-name" type="text" placeholder="Name" required>
-                <input class="form-surname" type="text" placeholder="Surname" required>
-                <input class="form-email" type="email" placeholder="Email" required>
-                <input class="form-phone"type="phone" placeholder="Phone" required>
-                <textarea class="form-msg">Message</textarea>
-                <button class="send"> Wyślij</button>
+                <input id="form-name" type="text" placeholder="*Name" required>
+                <input id="form-surname" type="text" placeholder="*Surname" required>
+                <input id="form-email" type="email" placeholder="*Email" required>
+                <input id="form-phone"type="phone" placeholder="Phone">
+                <textarea id="form-msg" required placeholder="*Message"></textarea>
+                <button type="submit">Wyślij</button>
             </form>
             </div>
             <div class = "adressdiv">
@@ -53,6 +54,6 @@
                 <a class = "sociallinks" href="#"><img src= "assets/logo_facebook.png"></a>
                 </div>
           </footer>
-        <script src="" async defer></script>
+          <script defer src="form.js"></script> 
     </body>
 </html>

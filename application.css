@@ -187,13 +187,17 @@ footer div > a > img {
     width: 400px;
     margin: auto;
   }
-input, textarea, button{
+input, textarea, button {
     margin: 3px 0px;
-    padding: 5px 0px;
-    border: 2px blue solid;
+    height: 30px;
+    padding: 5px 5px;
     border-radius: 5px;
+    border: 0.1px solid grey;
 }
-
+button {
+    background-color: cornflowerblue;
+    height: 30px;
+}
 
 .adressdiv {
     width:40%;
