@@ -7,7 +7,7 @@
         <meta name="description" content="Mr.Cofee - best coffee in Katowice">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="application.css">
-       
+        <script defer src="form.js"></script> 
     </head>
     <body>
         <header>
@@ -25,11 +25,16 @@
             </div>
             <div> 
             <form class="form-1">
-                <input id="form-name" type="text" placeholder="*Name" required>
-                <input id="form-surname" type="text" placeholder="*Surname" required>
-                <input id="form-email" type="email" placeholder="*Email" required>
-                <input id="form-phone"type="phone" placeholder="Phone">
-                <textarea id="form-msg" required placeholder="*Message"></textarea>
+                <label for="form-name">*Name:</label>
+                <input id="form-name" type="text" placeholder="write your name" name="form-name" required>
+                <label for="form-surname">*Surname:</label>
+                <input id="form-surname" type="text" placeholder="write your surname" required>
+                <label for="form-email">*Email:</label>
+                <input id="form-email" type="*email" placeholder="write your email address" required>
+                <label for="form-phone">Phone:</label>
+                <input id="form-phone"type="phone" placeholder="write your phone number (not required)">
+                <label for="form-msg">*Message</label>
+                <textarea id="form-msg" required placeholder="What's the point?"></textarea>
                 <button type="submit">Wyślij</button>
             </form>
             </div>
@@ -54,6 +59,5 @@
                 <a class = "sociallinks" href="#"><img src= "assets/logo_facebook.png"></a>
                 </div>
           </footer>
-          <script defer src="form.js"></script> 
     </body>
 </html>

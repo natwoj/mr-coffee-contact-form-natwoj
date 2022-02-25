@@ -194,6 +194,11 @@ input, textarea, button {
     border-radius: 5px;
     border: 0.1px solid grey;
 }
+label {
+    color: black;
+    text-align: left;
+    margin: 2px;
+}
 button {
     background-color: cornflowerblue;
     height: 30px;
