@@ -16,6 +16,7 @@ form.addEventListener("submit", e => {
     }
 })
 
+
 //input name check function
 function inputNameCheck (inputName) {
     if (inputName.value.length >= 3 ) {  
@@ -40,21 +41,12 @@ function inputSurnameCheck (inputSurname) {
 function validateEmail(inputmail) {
     const validateEmailRegex = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
     const result = validateEmailRegex.test(inputmail)
-        
-    if (result == true) {
-        return true;
-    }
-    else return false;
+        return result;
     }
 
 // basic phone validate using regExp
 function validatePhone(inputphone) {
     const validatePhoneRegex = /^\+?[1-9][0-9]{7,14}$/
     const result = validatePhoneRegex.test(inputphone)
-        
-    if (result == true) {
-        return true;
-    }
-    else
-        return false
+       return result
     }
