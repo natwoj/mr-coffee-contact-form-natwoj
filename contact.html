@@ -7,6 +7,9 @@
         <meta name="description" content="Mr.Cofee - best coffee in Katowice">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="application.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -36,7 +39,7 @@
                 <input id="form-phone"type="phone" placeholder="write your phone number (not required)">
                 <label for="form-msg">*Message</label>
                 <textarea id="form-msg" required placeholder="What's the point?"></textarea>
-                <button type="submit">Wyślij</button>
+                <button type="submit" id="submitbtn">Wyślij</button>
             </form>
             </div>
             <div class = "adressdiv">
@@ -54,16 +57,13 @@
 
         <!-- My first modal -->
         <div id="justModal" class="modal">
-
             <!-- Modal content -->
             <div class="modal-content">
               <h2 class="modal-title">MERCI BUKU</br>
                 Votre message a bien été envoyé !</h2>
               <p class="modal-text">Nous essaierons répondre au mieux dans les plus brefs délais. À bientot chez Mr.Coffee</p>
               <button class="close" id="close">FERMER</button>
-              <p></p>
             </div>
-
           </div>
         <footer>
             <a href="index.html" target="_blank" class="footerlogo" ><img src= "assets/logo_blanc.png"></a>

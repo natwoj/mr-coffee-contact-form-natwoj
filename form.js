@@ -5,10 +5,11 @@ const inputSurname = document.getElementById("form-surname")
 const inputPhone =  document.getElementById("form-phone")
 const textArea = document.getElementById("form-msg")
 const inputEmail =  document.getElementById("form-email") 
+const inputSubmit = document.getElementById("submitbtn");
 
 // modal consts
-const showModal = getElementByid("justModal")
-const closingModal = getElementById("close")
+const showModal = document.getElementById("justModal")
+const closingModal = document.getElementById("close")
 
 // walidacja inputa name 
 function inputNameCheck (inputName) {
@@ -18,7 +19,6 @@ function inputNameCheck (inputName) {
         return false;
     }
 }
-
 //walidacja inputa surname
 function inputSurnameCheck (inputSurname) {
     if (inputSurname.value.length > 3 ) {  
@@ -47,25 +47,21 @@ function validatePhone(inputPhone) {
         return false;
     }
 
-// wysylanie forma via submit + wyswietlanie modala jezeli wszystkie pola poprawne
+/*wysylanie forma via submit + wyswietlanie modala jezeli wszystkie pola poprawne
 form.addEventListener("submit", e => {
     e.preventDefault();
-    if (AllCorrect () == true) {
-            showModal.style.display = 'block';
-            console.log(inputName.value, inputSurname.value, inputPhone,value, inputEmail.value)
-        } else {
-    return 
+    console.log("ortorpyotpoytrpoyrt")
     })
+*/
 
-// walidacja wszystkich pol naraz 
-function AllCorrect () {
-    if (
-        inputNameCheck(inputName) == true;
-        inputNameCheck(inputSurname) == true;
-        validateEmail(inputEmail) == true;
-        validatePhone(inputPhone) == true; )
-        return true;
-}
-else {
-    return false
-}
+//podpiecie pod submita - eventa na click = pokazanie modala 
+inputSubmit.addEventListener('click', (e) => {
+        e.preventDefault();
+            showModal.style.display = 'block';
+})
+
+// podpiecie pod buttona modala zdarzenia click => zamkniecie modala
+closingModal.addEventListener('click', (e) => {
+    e.preventDefault();
+        showModal.style.display = 'none';
+})

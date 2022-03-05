@@ -223,7 +223,7 @@ address {
 
 /* modal */ 
 .modal {
-    display: block;
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -233,19 +233,19 @@ address {
     background-color: white;
     border-radius: 20px;
     text-align: center;
-    padding: 30px;
-    
+    padding: 50px;
 }
 .modal-text {
-    margin-bottom: 40px;
-    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
 }
 .close {
+    font-family: 'Roboto', sans-serif;
     width: 100px;
     font-size: 20px;
-    align-self: flex-end;
     background-color: grey;
-    border: none;
+    color: white;
+    border: none; 
 }
 /* about html */
 .section1, .section2 {
