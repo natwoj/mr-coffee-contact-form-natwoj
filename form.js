@@ -6,20 +6,14 @@ const inputPhone =  document.getElementById("form-phone")
 const textArea = document.getElementById("form-msg")
 const inputEmail =  document.getElementById("form-email") 
 
-form.addEventListener("submit", e => {
-    e.preventDefault();
-
-    inputNameCheck(inputName)
-    inputNameCheck(inputSurname)
-    validateEmail(inputEmail)
-    validatePhone(inputPhone)
-    AllFilled (inputName, inputSurname, inputEmail) 
-    })
+// modal consts
+const showModal = getElementByid("justModal")
+const closingModal = getElementById("close")
 
 // walidacja inputa name 
 function inputNameCheck (inputName) {
     if (inputName.value.length > 3 ) {  
-        console.log(inputName.value)
+        return true
     } else {
         return false;
     }
@@ -28,18 +22,17 @@ function inputNameCheck (inputName) {
 //walidacja inputa surname
 function inputSurnameCheck (inputSurname) {
     if (inputSurname.value.length > 3 ) {  
-        console.log(inputSurname.value)
+       return true;
     } else {
         return false;
     }
 }
-
 // walidacja inputa email 
 function validateEmail(inputEmail) {
     const validateEmailRegex = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
     const result = validateEmailRegex.test(inputEmail)
     if (result == true) {
-    console.log(inputEmail.value)
+    return true;
     }
     return false;
 }
@@ -49,9 +42,30 @@ function validatePhone(inputPhone) {
     const validatePhoneRegex = /^\+?[1-9][0-9]{7,14}$/
     const result = validatePhoneRegex.test(inputPhone)
     if (result == true) {
-        console.log(inputPhone.value)
+       return true;
         }
         return false;
     }
 
-    
+// wysylanie forma via submit + wyswietlanie modala jezeli wszystkie pola poprawne
+form.addEventListener("submit", e => {
+    e.preventDefault();
+    if (AllCorrect () == true) {
+            showModal.style.display = 'block';
+            console.log(inputName.value, inputSurname.value, inputPhone,value, inputEmail.value)
+        } else {
+    return 
+    })
+
+// walidacja wszystkich pol naraz 
+function AllCorrect () {
+    if (
+        inputNameCheck(inputName) == true;
+        inputNameCheck(inputSurname) == true;
+        validateEmail(inputEmail) == true;
+        validatePhone(inputPhone) == true; )
+        return true;
+}
+else {
+    return false
+}
