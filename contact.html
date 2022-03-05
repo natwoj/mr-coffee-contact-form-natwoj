@@ -7,7 +7,6 @@
         <meta name="description" content="Mr.Cofee - best coffee in Katowice">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="application.css">
-        <script defer src="form.js"></script> 
     </head>
     <body>
         <header>
@@ -24,6 +23,8 @@
              <h1>Best coffee in Katowice, grab a mug!</h1>
             </div>
             <div> 
+
+                <!-- form -->
             <form class="form-1">
                 <label for="form-name">*Name:</label>
                 <input id="form-name" type="text" placeholder="write your name" name="form-name" required>
@@ -50,6 +51,20 @@
             <img class="map" src="assets/carte_contact.png">
             </div>
         </div>
+
+        <!-- My first modal -->
+        <div id="justModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <h2 class="modal-title">MERCI BUKU</br>
+                Votre message a bien été envoyé !</h2>
+              <p class="modal-text">Nous essaierons répondre au mieux dans les plus brefs délais. À bientot chez Mr.Coffee</p>
+              <button class="close" id="close">FERMER</button>
+              <p></p>
+            </div>
+            
+          </div>
         <footer>
             <a href="index.html" target="_blank" class="footerlogo" ><img src= "assets/logo_blanc.png"></a>
                 <h3 >  Mr. Coffe - follow us in social media</h3> 
@@ -59,5 +74,6 @@
                 <a class = "sociallinks" href="#"><img src= "assets/logo_facebook.png"></a>
                 </div>
           </footer>
+          <script src="form.js" defer></script> 
     </body>
 </html>

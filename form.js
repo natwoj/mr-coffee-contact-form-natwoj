@@ -1,52 +1,57 @@
 
 const form = document.querySelector("form")
-const inputName = document.getElementById('form-name')
-const inputSurname = document.getElementById('form-surname')
+const inputName = document.getElementById("form-name")
+const inputSurname = document.getElementById("form-surname")
 const inputPhone =  document.getElementById("form-phone")
 const textArea = document.getElementById("form-msg")
 const inputEmail =  document.getElementById("form-email") 
 
-//submiting form if inputs ok 
 form.addEventListener("submit", e => {
     e.preventDefault();
 
-    if (inputNameCheck(inputName) === inputName.value && inputSurnameCheck(inputSurname) === inputSurname.value && validateEmail(inputEmail) == true && validatePhone(inputPhone) == true) {
-        e.target.submit();
-    console.log(inputName.value + " " + inputSurname.value + " " + inputEmail.value + " " + inputPhone.value)
-    }
-})
+    inputNameCheck(inputName)
+    inputNameCheck(inputSurname)
+    validateEmail(inputEmail)
+    validatePhone(inputPhone)
+    AllFilled (inputName, inputSurname, inputEmail) 
+    })
 
-
-//input name check function
+// walidacja inputa name 
 function inputNameCheck (inputName) {
-    if (inputName.value.length >= 3 ) {  
-        return inputName.value;
+    if (inputName.value.length > 3 ) {  
+        console.log(inputName.value)
     } else {
-        //jeżeli nie to alert, zeby poprawic 
-        alert("Za krotkie");
+        return false;
     }
 }
 
-//input surname check function
+//walidacja inputa surname
 function inputSurnameCheck (inputSurname) {
-    if (inputSurname.value.length >= 3 ) {  
-        return inputSurname.value;
+    if (inputSurname.value.length > 3 ) {  
+        console.log(inputSurname.value)
     } else {
-       //if not - alert to correct 
-        alert("Za krotkie");
+        return false;
     }
 }
 
-// basic email validate using regExp
-function validateEmail(inputmail) {
+// walidacja inputa email 
+function validateEmail(inputEmail) {
     const validateEmailRegex = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
-    const result = validateEmailRegex.test(inputmail)
-        return result;
+    const result = validateEmailRegex.test(inputEmail)
+    if (result == true) {
+    console.log(inputEmail.value)
     }
+    return false;
+}
 
 // basic phone validate using regExp
-function validatePhone(inputphone) {
+function validatePhone(inputPhone) {
     const validatePhoneRegex = /^\+?[1-9][0-9]{7,14}$/
-    const result = validatePhoneRegex.test(inputphone)
-       return result
+    const result = validatePhoneRegex.test(inputPhone)
+    if (result == true) {
+        console.log(inputPhone.value)
+        }
+        return false;
     }
+
+    
