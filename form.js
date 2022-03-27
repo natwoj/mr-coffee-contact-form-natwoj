@@ -1,4 +1,3 @@
-
 const form = document.querySelector("form")
 const inputName = document.getElementById("form-name")
 const inputSurname = document.getElementById("form-surname")
@@ -29,7 +28,7 @@ function inputsTest (fieldName, fieldLength, reg) {
     return false;
 }
 
-// tests if length of fields is correct 
+// tests if length and regExp of fields are correct 
 function validateLengthAndReg () {
     if (inputsTest(inputName, 3, /^[A-Za-z]*$/) &&
     inputsTest(inputSurname, 3, /^[A-Za-z]*$/) && 
@@ -38,7 +37,6 @@ function validateLengthAndReg () {
     inputsTest(textArea, 4, /^[A-Za-z]*$/))
     return true; 
 }
-
 
 // getting all values from form inputs
 function GetAllValues () {
