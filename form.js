@@ -14,10 +14,11 @@ const closingModal = document.getElementById("close")
 inputSubmit.addEventListener("click", (e) => {
     e.preventDefault();
     if (validateLengthAndReg () === true) {
+        showModal.style.display = 'block'
         console.log (GetAllValues());
         clearForm();
     }
-    console.log("blad")
+    console.log("error message")
     })
 
 // test fields values, length, regExp
@@ -38,6 +39,7 @@ function validateLengthAndReg () {
     return true; 
 }
 
+
 // getting all values from form inputs
 function GetAllValues () {
     const AllValues = {} ; 
@@ -57,3 +59,9 @@ function clearForm () {
     textArea.value = '';
 }
 
+// adding to button of modal click event = close modal
+closingModal.addEventListener('click', (e) => {
+    e.preventDefault();
+        showModal.style.display = 'none';
+        clearForm();
+})
