@@ -13,8 +13,30 @@ const closingModal = document.getElementById("close")
 
 inputSubmit.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log (GetAllValues());
-})
+    if (validateLengthAndReg () === true) {
+        console.log (GetAllValues());
+        clearForm();
+    }
+    console.log("blad")
+    })
+
+// test fields values, length, regExp
+function inputsTest (fieldName, fieldLength, reg) {
+    if (fieldName.value.length >= fieldLength && reg.test(fieldName.value)) {
+        return true;
+    }
+    return false;
+}
+
+// tests if length of fields is correct 
+function validateLengthAndReg () {
+    if (inputsTest(inputName, 3, /^[A-Za-z]*$/) &&
+    inputsTest(inputSurname, 3, /^[A-Za-z]*$/) && 
+    inputsTest(inputEmail, 3, /^[-\w\.]+@([-\w]+\.)+[a-z]+$/i) && 
+    inputsTest(inputPhone, 12, /^\+?[1-9][0-9]{7,14}$/ ) && 
+    inputsTest(textArea, 4, /^[A-Za-z]*$/))
+    return true; 
+}
 
 // getting all values from form inputs
 function GetAllValues () {
