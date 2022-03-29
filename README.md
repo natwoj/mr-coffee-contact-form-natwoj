@@ -8,12 +8,12 @@ Main features:
 - checking given length vs input values
 - test given regExp vs input values
 
-## Data 
+## Show data 
 
 - true validation shows data in console 
 - true validation shows success modal 
 
-## Modal 
+## Show | hide modal 
 
 - close modal on click
 
